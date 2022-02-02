@@ -18,15 +18,18 @@ namespace CinemaCentre.Controllers
             _logger = logger;
         }
 
-        public IActionResult Homepage()
+        public IActionResult Index()
         {
             return View();
         }
 
+        [Route("Privacy")]
         public IActionResult Privacy()
         {
             return View();
         }
+
+        [Route("Show-all")]
         public IActionResult ShowAll()
         {
             return View();

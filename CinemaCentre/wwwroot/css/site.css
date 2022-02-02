@@ -1,1 +1,36 @@
-﻿
+﻿header {
+    background-color: #b8e2e0;
+    height: 200px;
+}
+
+div{
+    height: 500px;
+}
+
+nav {
+    background-color: #ae84ab;
+    width: 10vw;
+}
+
+article {
+    background-color: #547bbb;
+    widht: 60vw;
+}
+
+aside {
+    background-color: #ae84ab;
+    witdh:10vw;
+}
+
+.content{
+    display:flex
+}
+
+
+
+
+
+
+body{
+    margin:0;
+}
