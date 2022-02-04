@@ -1,4 +1,10 @@
-﻿header {
+﻿body{
+    margin:0;
+}
+
+
+
+header {
     background-color: #b8e2e0;
     height: 200px;
 }
@@ -9,17 +15,17 @@ div{
 
 nav {
     background-color: #ae84ab;
-    width: 10vw;
+    width: 30vw;
 }
 
 article {
     background-color: #547bbb;
-    widht: 60vw;
+    width: 60vw;
 }
 
 aside {
     background-color: #ae84ab;
-    witdh:10vw;
+    width:10vw;
 }
 
 .content{
