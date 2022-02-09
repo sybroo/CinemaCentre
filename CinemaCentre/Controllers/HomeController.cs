@@ -20,6 +20,14 @@ namespace CinemaCentre.Controllers
 
         public IActionResult Index()
         {
+           return View();
+        }
+
+        [Route("detail/{id}")]
+        public IActionResult Detail(string id)
+        {
+            ViewData["id"] = id;
+
             return View();
         }
 

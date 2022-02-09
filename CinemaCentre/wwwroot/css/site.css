@@ -5,7 +5,7 @@
 
 
 header {
-    background-color: #b8e2e0;
+    background-color: #547bbb;
     height: 200px;
 }
 
@@ -15,17 +15,17 @@ div{
 
 nav {
     background-color: #ae84ab;
-    width: 30vw;
+    width: 20vw;
 }
 
 article {
-    background-color: #547bbb;
+    background-color: #b8e2e0;
     width: 60vw;
 }
 
 aside {
     background-color: #ae84ab;
-    width:10vw;
+    width:20vw;
 }
 
 .content{
