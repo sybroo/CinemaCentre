@@ -14,7 +14,7 @@ div{
 }
 
 nav {
-    background-color: #ae84ab;
+    background-color: #b8e2e0;
     width: 20vw;
 }
 
@@ -24,10 +24,14 @@ article {
 }
 
 aside {
-    background-color: #ae84ab;
-    width:20vw;
+    background-color: #b8e2e0;
+    width: 20vw;
 }
 
+footer {
+    background-color: #ae84ab;
+    height: 100px;
+}
 .content{
     display:flex
 }
