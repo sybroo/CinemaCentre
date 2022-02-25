@@ -14,11 +14,17 @@ div{
 }
 
 nav {
-    background-color: #b8e2e0;
+    background-color: #547bbb;
     width: 20vw;
 }
 
-article {
+a {
+    color: black;
+    text-align: center;
+    background-color: white;
+}
+
+ article {
     background-color: #b8e2e0;
     width: 60vw;
 }
