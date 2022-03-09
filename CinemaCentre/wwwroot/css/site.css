@@ -7,12 +7,16 @@
 header {
     background-color: #b8e2e0;
     height: 200px;
+    font-size: 40px;
+    text-align: center;
 }
 
 
 nav {
     background-color: #b8e2e0;
     width: 20vw;
+    font-size: 30px;
+   text-align
 }
 
 a {
@@ -23,14 +27,9 @@ a {
 
 article {
     background-color: #547bbb;
-    width: 80vw;
+   width: 100vw;
 }
 
-
-footer {
-    background-color: #ae84ab;
-    height: 100px;
-}
 .content{
     display:flex
 }
