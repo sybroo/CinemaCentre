@@ -5,16 +5,13 @@
 
 
 header {
-    background-color: #547bbb;
+    background-color: #b8e2e0;
     height: 200px;
 }
 
-div{
-    height: 500px;
-}
 
 nav {
-    background-color: #547bbb;
+    background-color: #b8e2e0;
     width: 20vw;
 }
 
@@ -24,15 +21,11 @@ a {
     background-color: white;
 }
 
- article {
-    background-color: #b8e2e0;
-    width: 60vw;
+article {
+    background-color: #547bbb;
+    width: 80vw;
 }
 
-aside {
-    background-color: #b8e2e0;
-    width: 20vw;
-}
 
 footer {
     background-color: #ae84ab;

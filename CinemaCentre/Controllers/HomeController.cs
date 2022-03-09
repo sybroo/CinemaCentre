@@ -42,6 +42,26 @@ namespace CinemaCentre.Controllers
         {
             return View();
         }
+
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("contact")]
+        public IActionResult ContactPost(Person person)
+        {
+            if (ModelState.IsValid)
+            {
+                //opslaan in database
+                return RedirectToAction("Succes!");
+               
+            }
+            return View("contact", person);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
