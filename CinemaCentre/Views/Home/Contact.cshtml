@@ -29,6 +29,12 @@
         @Html.ValidationMessageFor(m=> m.Email)    
     </div>
 
+    <div>
+        @Html.LabelFor(m=> m.Message)
+        @Html.TextAreaFor(m=> m.Message)
+        @Html.ValidationMessageFor(m=> m.Message)    
+    </div>
+
     <input type="submit" value="opslaan"/>
 </form>
 

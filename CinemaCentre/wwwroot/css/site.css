@@ -13,10 +13,10 @@ header {
 
 
 nav {
-    background-color: #b8e2e0;
+    background-color: #000000;
     width: 20vw;
     font-size: 30px;
-   text-align
+    text-align: center;
 }
 
 a {
