@@ -56,11 +56,20 @@ namespace CinemaCentre.Controllers
             if (ModelState.IsValid)
             {
                 //opslaan in database
-                return RedirectToAction("Succes!");
+                return RedirectToAction("Succes",person);
                
             }
             return View("contact", person);
         }
+       
+        
+        [Route("Succes")]
+        public IActionResult Succes(Person person)
+        
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
