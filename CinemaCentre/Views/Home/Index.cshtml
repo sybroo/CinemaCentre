@@ -1,7 +1,18 @@
-﻿@{
+﻿
+@model List<string>
+
+@{
     ViewData["Title"] = "Home Page";
 }
+
 <h1>@ViewData["id"]</h1> 
+
+<ul>
+    @foreach(var name in Model)
+    {
+        <li>@name</li>
+    }  
+</ul>
 
 <p>Welkom bij onze website Cinema Centre! 
 Elke maand komen er nieuwe films bij voor U om te zien.
