@@ -7,13 +7,13 @@ namespace CinemaCentre.Database
 {
     public class Product
     {
-        public int dd { get; set; }    
+        public int id { get; set; }    
 
         public string Titel { get; set; }
 
-        public string beschrijving  { get; set; }
+        public string Beschrijving  { get; set; }
 
-        public string beschikbaarheid   { get; set; }
+        public string Beschikbaarheid   { get; set; }
 
 
     }

@@ -88,5 +88,21 @@ namespace CinemaCentre.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public List<Product> GetAllProducts()
+        {
+            var rows = DatabaseConnector.GetRows("select * from product");
+
+
+            List<Product> product = new List<Product>();
+
+            foreach (var row in rows)
+            {
+
+                product.Add(row["naam"].ToString());
+            }
+
+            return (product);
+        }
     }
 }
+
