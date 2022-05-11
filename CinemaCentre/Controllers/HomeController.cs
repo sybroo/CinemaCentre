@@ -101,6 +101,9 @@ namespace CinemaCentre.Controllers
                 Movie m = new Movie();
 
                 m.Afbeelding = row["afbeedling"].ToString();
+                m.Titel = row["Titel"].ToString();
+                m.Beschrijving = row["Beschrijving"].ToString();
+                m.Id = Convert.ToInt32(row["id"]);
 
                 product.Add(m);
             }
