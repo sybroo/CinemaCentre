@@ -44,8 +44,8 @@ namespace CinemaCentre.Controllers
             return View();
         }
 
-        [Route("Privacy")]
-        public IActionResult Privacy()
+        [Route("Tijden")]
+        public IActionResult Tijden()
         {
             return View();
         }
