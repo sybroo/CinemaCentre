@@ -1,4 +1,5 @@
 ﻿using CinemaCentre.Controllors;
+using CinemaCentre.Database;
 using CinemaCentre.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -88,17 +89,20 @@ namespace CinemaCentre.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public List<Product> GetAllProducts()
+        public List<Movie> GetAllProducts()
         {
             var rows = DatabaseConnector.GetRows("select * from product");
 
 
-            List<Product> product = new List<Product>();
+            List<Movie> product = new List<Movie>();
 
             foreach (var row in rows)
             {
+                Movie m = new Movie();
 
-                product.Add(row["naam"].ToString());
+                m.Afbeelding = row["afbeedling"].ToString();
+
+                product.Add(m);
             }
 
             return (product);
