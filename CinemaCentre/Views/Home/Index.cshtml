@@ -1,5 +1,5 @@
-﻿
-@model List<string>
+﻿@using CinemaCentre.Database
+@model List<Movie>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -7,10 +7,11 @@
 
 <h1>@ViewData["id"]</h1> 
 
-<div>
-    @foreach(string name in Model)
+<div class="carousel">
+    @foreach(Movie movie in Model)
     {
-        <p>@name</p>
+        <div class="film">@movie.Titel</div>
+
     }  
 </div>
 

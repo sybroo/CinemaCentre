@@ -21,19 +21,11 @@ namespace CinemaCentre.Controllers
         }
 
         public IActionResult Index()
+
         {
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var allMovies = GetAllMovies();
 
-
-            List<string> names = new List<string>();
-
-            foreach (var row in rows)
-            {
-
-                names.Add(row["naam"].ToString());
-            }
-
-            return View(names);
+            return View(allMovies);
         }
 
         [Route("detail/{id}")]
@@ -75,16 +67,16 @@ namespace CinemaCentre.Controllers
             if (ModelState.IsValid)
             {
                 //opslaan in database
-                return RedirectToAction("Succes",person);
-               
+                return RedirectToAction("Succes", person);
+
             }
             return View("contact", person);
         }
-       
-        
+
+
         [Route("Succes")]
         public IActionResult Succes(Person person)
-        
+
         {
             return View();
         }
@@ -95,9 +87,10 @@ namespace CinemaCentre.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public List<Movie> GetAllProducts()
+
+        public List<Movie> GetAllMovies()
         {
-            var rows = DatabaseConnector.GetRows("select * from product");
+            var rows = DatabaseConnector.GetRows("select * from movie");
 
 
             List<Movie> product = new List<Movie>();
@@ -106,7 +99,7 @@ namespace CinemaCentre.Controllers
             {
                 Movie m = new Movie();
 
-                m.Afbeelding = row["afbeedling"].ToString();
+                m.Afbeelding = row["afbeelding"].ToString();
                 m.Titel = row["Titel"].ToString();
                 m.Beschrijving = row["Beschrijving"].ToString();
                 m.Id = Convert.ToInt32(row["id"]);
