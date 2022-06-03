@@ -10,8 +10,10 @@
 <div class="carousel">
     @foreach(Movie movie in Model)
     {
-        <div class="film">@movie.Titel</div>
-        <img src="@movie.Afbeelding"/>
+        <div class="film">
+            <h2>@movie.Titel</h2>
+            <img src="@movie.Afbeelding"/>
+        </div>       
         
 
     }  
