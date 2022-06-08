@@ -3,12 +3,6 @@
    
 }
 
-img {
-    width: 100px
-   
-}
-
-
 header {
     background-color: #b8e2e0;
     height: 200px;
@@ -43,4 +37,16 @@ article {
 
 contact{
     text-align:center
+}
+
+.carousel{
+    display:flex;
+}
+
+.film img{
+    width:200px;
+}
+
+.film{
+    flex:1;
 }
