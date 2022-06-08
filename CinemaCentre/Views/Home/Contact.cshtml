@@ -4,6 +4,8 @@
 }
 <h1>@ViewData["Title"]</h1>
 
+<p> Welkom op de contactpagina als u vragen of opmerking hebt kunt u ze hier achterlaten. @ViewData["."]</p>
+
 <form method="post">
     <div>
         @Html.LabelFor(m=> m.FirstName)
@@ -38,4 +40,3 @@
     <input type="submit" value="opslaan"/>
 </form>
 
-<p> Hallo @ViewData["."]</p>

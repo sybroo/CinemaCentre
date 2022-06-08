@@ -25,28 +25,37 @@ a {
     font-size: 16px;
 }
 
+.carousel {
+    display: flex;
+}
+
+.film img {
+    width: 200px;
+}
+
+.film {
+    flex: 1;
+}
+
 article {
    background-color: #547bbb;
    width: 100vw;
 }
 
-.content{
-    display:flex
+.content {
+    display: flex;
+    text-align: center;
+    line-height: 1.7;
+    text-shadow: 0.25px 0.25px #000000;
+    font-style: italic;
+}
+
+label {
+    margin: 30px;
+}
+
+form{
+    padding: 50px;
 }
 
 
-contact{
-    text-align:center
-}
-
-.carousel{
-    display:flex;
-}
-
-.film img{
-    width:200px;
-}
-
-.film{
-    flex:1;
-}
