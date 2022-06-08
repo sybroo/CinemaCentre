@@ -1,15 +1,17 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CinemaCentre.Models;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
 namespace CinemaCentre.Controllors
 {
     public static class DatabaseConnector
     {
+        // stel in waar de database gevonden kan worden
+        public static string connectionString = "Server=172.16.160.21;Port=3306;Database=111687;Uid=111687;Pwd=inf2122sql;";
 
         public static List<Dictionary<string, object>> GetRows(string query)
         {
-            // stel in waar de database gevonden kan worden
-            string connectionString = "Server=172.16.160.21;Port=3306;Database=111687;Uid=111687;Pwd=inf2122sql;";
+
 
             // maak een lege lijst waar we de namen in gaan opslaan
             List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
@@ -48,6 +50,21 @@ namespace CinemaCentre.Controllors
             // return de lijst met namen
             return rows;
         }
+        public static void SavePerson(Person person)
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, emailadres, opmerking) VALUES(?voornaam, ?achternaam, ?email, ?opmerking)", conn);
 
+                // Elke parameter moet je handmatig toevoegen aan de query
+                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.LastName;
+                cmd.Parameters.Add("?emailadres", MySqlDbType.Text).Value = person.Email;
+                cmd.Parameters.Add("?telefoonnummer", MySqlDbType.Text).Value = person.Phone;
+                cmd.Parameters.Add("?opmerking", MySqlDbType.Text).Value = person.Message;
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }
