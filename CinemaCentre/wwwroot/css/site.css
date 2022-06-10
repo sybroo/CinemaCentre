@@ -5,28 +5,18 @@
 
 header {
     background-color: #b8e2e0;
-    height: 200px;
+    height: 250px;
     font-size: 40px;
     text-align: center;
 }
 
 
-nav {
-    background-color: #b8e2e0;
-    text-align: center;
-    
-}
-
-a {
-    color: black;
-    text-align: center;
-    background-color: white;
-    text-decoration-thickness: 4px;
-    font-size: 16px;
+p {
+    font-size: 25px;
 }
 
 .carousel {
-    display: flex;
+   display: flex;
 }
 
 .film img {
@@ -39,7 +29,7 @@ a {
 
 article {
    background-color: #547bbb;
-   width: 100vw;
+   width: 100%;
 }
 
 .content {
@@ -48,14 +38,57 @@ article {
     line-height: 1.7;
     text-shadow: 0.25px 0.25px #000000;
     font-style: italic;
+    
 }
 
 label {
     margin: 30px;
+    font-size: 20px;
+    display: block;
+}
+
+input[type="text" i] {
+    padding: 2px 2px;
+}
+
+textarea{
+    margin: 30px;
+    padding: 20px;
 }
 
 form{
-    padding: 50px;
+    padding: 150px;
 }
 
+footer{
+    position: fixed;
+    bottom: 0px;
+    display: block;
+    width: 100vw;
+    height: 60px
+}
 
+.center{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+}
+
+.nav {
+    background-color: #b8e2e0;
+    text-align: center;
+    height: 13vw;
+}
+
+.nav a {
+        color: black;
+        text-align: center;
+       // text-decoration-thickness: 4px;
+        font-size: 25px;
+        margin: 135px;
+}
+
+   .nav a:hover {
+     width: 100vw;
+    }
