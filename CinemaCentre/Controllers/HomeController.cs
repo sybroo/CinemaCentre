@@ -46,6 +46,13 @@ namespace CinemaCentre.Controllers
         public IActionResult Movie()
         {
             return View();
+
+        }
+
+        [Route("Moviedetails")]
+        public IActionResult Moviedetails()
+        {
+            return View();
         }
 
         [Route("Show-all")]
