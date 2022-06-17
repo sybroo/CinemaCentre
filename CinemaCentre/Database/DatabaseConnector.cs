@@ -55,10 +55,10 @@ namespace CinemaCentre.Controllors
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(voornaam, achternaam, emailadres, opmerking) VALUES(?voornaam, ?achternaam, ?email, ?opmerking)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam, achternaam, emailadres, opmerking) VALUES(?naam, ?achternaam, ?emailadres, ?opmerking)", conn);
 
                 // Elke parameter moet je handmatig toevoegen aan de query
-                cmd.Parameters.Add("?voornaam", MySqlDbType.Text).Value = person.FirstName;
+                cmd.Parameters.Add("?naam", MySqlDbType.Text).Value = person.FirstName;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.Text).Value = person.LastName;
                 cmd.Parameters.Add("?emailadres", MySqlDbType.Text).Value = person.Email;
                 cmd.Parameters.Add("?telefoonnummer", MySqlDbType.Text).Value = person.Phone;
