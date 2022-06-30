@@ -5,7 +5,7 @@ namespace CinemaCentre.Models
 {
     public class Person
     {
-        [Display(Name="Voornaam")]
+        [Display(Name= "naam")]
         [Required(ErrorMessage ="Vul je voornaam alstublieft in!")]
         public string FirstName { get; set; }
 

@@ -73,6 +73,8 @@ namespace CinemaCentre.Controllers
         {
             if (ModelState.IsValid)
             {
+                DatabaseConnector.SavePerson(person);
+
                 //opslaan in database
                 return RedirectToAction("Succes", person);
 
